@@ -22,8 +22,7 @@ requirements:
   run:
     - python
     - deprecated ==1.2.18
-    # upstream pins ==0.1.35 but relaxed to avoid conflict with llama-cloud-services ==0.1.46
-    - llama-cloud >=0.1.35
+    - llama-cloud ==0.1.35
     - llama-index-core >=0.13.0,<0.15
 
 test:
