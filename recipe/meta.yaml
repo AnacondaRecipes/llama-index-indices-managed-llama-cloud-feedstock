@@ -10,7 +10,7 @@ source:
   sha256: b5e00752ab30564abf19c57595a2107f5697c3b03b085817b4fca84a38ebbd59
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -22,7 +22,12 @@ requirements:
   run:
     - python
     - deprecated ==1.2.18
-    - llama-cloud ==0.1.35
+    # upstream pins ==0.1.35 but relaxed to allow co-installation with
+    # llama-cloud-services 0.6.94 which requires llama-cloud ==0.1.46.
+    # This package is deprecated upstream and will not receive further updates.
+    # The llama-cloud 0.1.x API is backward-compatible (early llama-cloud-services
+    # versions used >=0.1.11,<0.2.0).
+    - llama-cloud >=0.1.35,<0.2.0
     - llama-index-core >=0.13.0,<0.15
 
 test:
