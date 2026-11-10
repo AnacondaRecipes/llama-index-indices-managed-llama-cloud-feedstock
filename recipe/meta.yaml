@@ -21,7 +21,6 @@ requirements:
     - pip
   run:
     - python
-    - deprecated ==1.2.18
     - llama-cloud >=1.6.0,<2
     - llama-index-core >=0.13.0,<0.15
 
@@ -42,7 +41,7 @@ about:
   license: MIT
   license_file: LICENSE
   license_family: MIT
-  doc_url: https://docs.llamaindex.ai/en/stable/
+  doc_url: https://developers.llamaindex.ai/python/framework/
   dev_url: https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/indices/llama-index-indices-managed-llama-cloud
 
 extra:
